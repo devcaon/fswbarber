@@ -8,6 +8,7 @@ import BarbershopItem from "./_components/Barbershop-item";
 import { quickSearchOptions } from "./_constants/search";
 import BookingItem from "./_components/Booking-item";
 import Footer from "./_components/Footer";
+import Search from "./_components/Search";
 
 
 export default async function Home() {
@@ -31,11 +32,8 @@ export default async function Home() {
         <p>Segunda-feira, 05 de Agosto</p>
 
         {/* search */}
-        <div className="flex items-center gap-2 mt-6">
-          <Input placeholder="Faça sua busca..." />
-          <Button>
-            <SearchIcon />
-          </Button>
+        <div className="mt-6">
+          <Search />
         </div>
 
         {/* busca rápida */}

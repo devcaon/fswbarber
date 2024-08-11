@@ -21,8 +21,12 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={nunito.className}>
         <AuthProvider>
-          {children}
-          <Footer />
+          <div className="flex flex-col  h-full">
+            <div className="flex-1">
+              {children}
+            </div>
+            <Footer />
+          </div>
           <Toaster />
         </AuthProvider>
       </body>
