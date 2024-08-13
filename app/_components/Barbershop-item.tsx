@@ -32,7 +32,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
 
           {/* button */}
           <Button variant="secondary" className="mt-3 w-full" asChild>
-            <Link href={`/barbershop/${barbershop.id}`}>
+            <Link href={`/barbershops/${barbershop.id}`}>
               Reservar
             </Link>
           </Button>

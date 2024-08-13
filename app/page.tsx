@@ -9,6 +9,7 @@ import { quickSearchOptions } from "./_constants/search";
 import BookingItem from "./_components/Booking-item";
 import Footer from "./_components/Footer";
 import Search from "./_components/Search";
+import Link from "next/link";
 
 
 export default async function Home() {
@@ -39,9 +40,11 @@ export default async function Home() {
         {/* busca rápida */}
         <div className="flex gap-3 mt-6 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map(option => (
-            <Button key={option.title} className="gap-2" variant='secondary'>
-              <Image src={option.imageUrl} alt={option.title} width={16} height={16} />
-              <p>{option.title}</p>
+            <Button asChild key={option.title} className="gap-2" variant='secondary'>
+              <Link href={`/barbershops?search=${option.title}`}>
+                <Image src={option.imageUrl} alt={option.title} width={16} height={16} />
+                <p>{option.title}</p>
+              </Link>
             </Button>
           ))}
         </div>
