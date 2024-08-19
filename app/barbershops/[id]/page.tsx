@@ -23,7 +23,8 @@ const BarberShopPage = async ({ params }: any) => {
       id: params.id
     },
     include: {
-      services: true
+      services: true,
+
     }
   })
 
@@ -72,7 +73,7 @@ const BarberShopPage = async ({ params }: any) => {
       <div className="p-5 border-b border-solid space-y-3">
         <h2 className='text-xs font-bold uppercase text-gray-400'>Serviços</h2>
         {barbershop.services.map(service => (
-          <ServiceItem key={service.id} service={service} />
+          <ServiceItem key={service.id} barbershop={barbershop} service={service} />
         ))}
       </div>
 
